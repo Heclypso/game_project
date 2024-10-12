@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "ABeeZee", system-ui;
+}
+
+body {
+    /* background-image: url("");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat; */
+    overflow: hidden;
+    z-index: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    margin: 10vw 0vw 0vw 10vw;
+    width: 30rem;
+    z-index: 0;
+}
+
+@media (orientation: portrait) {
+    body {
+        height: 100vh;
+        background-image: url("https://cdn-icons-png.freepik.com/256/16550/16550170.png?ga=GA1.1.1017870307.1719351440&semt=ais_hybrid");
+        background-size: 50vw 30vh;
+        background-position: center;
+    }
+
+    .container {
+        display: none;
+    }
+}
+
+@media (min-width: 1025px) {
+    .container {
+        margin: 10vw 0vw 0vw 5vw;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        margin: 10vw 0vw 0vw 5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 10vw 0vw 0vw 5vw;
+    }
+}

@@ -1,0 +1,127 @@
+.ally__field {
+    display: flex;
+}
+
+.card__container {
+    width: 190px;
+    height: 300px;
+    transition: 2s;
+}
+
+.enemy,
+.ally {
+    position: absolute;
+}
+
+.enemy .card__display {
+    transform: rotateY(180deg);
+}
+
+.enemy:nth-child(1) {
+    bottom: 0;
+    right: 32rem;
+}
+
+.enemy:nth-child(2) {
+    top: 1;
+    right: 16rem;
+}
+
+.enemy:nth-child(3) {
+    bottom: 0;
+    right: 0;
+}
+
+.ally:nth-child(1) {
+    bottom: 0;
+    left: 32rem;
+}
+
+.ally:nth-child(2) {
+    top: 0;
+    left: 16rem;
+}
+
+.ally:nth-child(3) {
+    bottom: 0;
+    left: 0;
+}
+
+.selected {
+    background-color: red;
+}
+
+.card__title {
+    padding: 4px;
+    width: 60%;
+    text-align: center;
+    background-color: #D9D9D9;
+    color: #030303;
+}
+
+.card__red__hp {
+    z-index: 1;
+    background-color: red; 
+}
+
+.card__green__hp,
+.ally__green__hp {
+    z-index: 2;
+    width: 100%;
+    background-color: #23CC64;
+}
+
+.card__hp__points,
+.ally__hp__points {
+    z-index: 3;
+    color: white;
+    font-size: 25px;
+    margin-left: 5.2rem;
+}
+
+.card__header {
+    padding: 10px;
+    display: flex;
+    font-size: 28px;
+    background-color: #494949;
+    color: white;
+}
+
+.card__header p {
+    margin: 10px;
+}
+
+.card__header img {
+    width: 40px;
+}
+
+.card__display img {
+    width: 100%;
+    display: none;
+}
+
+.container .card__display img {
+    display: block;
+}
+
+.card__description {
+    padding: 15px;
+    color: white;
+}
+
+.card__description--ultimate {
+    color: #272727;
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+    .card__container {
+        width: 160px;
+        transition: 2s;
+    }
+
+    .card__hp__points {
+        font-size: 1rem;
+    }
+}

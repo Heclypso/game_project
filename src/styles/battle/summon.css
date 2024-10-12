@@ -1,0 +1,101 @@
+.robot__cat__banner__container {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #A9A9A9;
+    display: none;
+    z-index: 1;
+}
+
+.new__character__achievement {
+    font-weight: 400;
+    position: absolute;
+    font-size: 1.6rem;
+    background-color: #fff;
+    padding: 1.4rem;
+    width: 20rem;
+    height: 5rem;
+    text-align: center;
+    border-radius: 0px  0.7rem 0.7rem 0px;
+    color: #3F3F3F;
+}
+
+.new__deck__achievement {
+    margin-top: 6rem;
+    font-size: 1.3rem;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 0rem  0.7rem 0.7rem 0rem;
+    text-align: center;
+    padding: 1.6rem;
+    width: 16rem;
+    height: 5rem;
+    color: #3F3F3F;
+}
+
+.robot__cat__banner__name__container {
+    position: absolute;
+    top: 40%;
+    margin-left: 1.5rem;
+    width: 40rem;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.robot__cat__name {
+    color: white;
+    font-size: 5rem;
+}
+
+.robot__cat__title {
+    color: white;
+    font-size: 4.5rem;
+}
+
+.robot__cat__img {
+    margin-left: 35rem;
+}
+
+.robot__cat__banner__share__button {
+    position: absolute;
+    width: 9rem;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 4rem;
+    right: 0;
+    bottom: 0;
+    color: #3F3F3F;
+    font-size: 1.2rem;
+    font-weight: 580;
+    background-color: #fff;
+    border: none;
+}
+
+.robot__cat__description__container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 35vh;
+    width: 100vw;
+    height: 22vh;
+    background-color: #fff;
+    display: none;
+}
+
+.robot__cat__description {
+    font-size: 1.6rem;
+    width: 26rem;
+    color: #3F3F3F;
+}
+
+.robot__cat__description__text__colored {
+    color: #47D99F;
+}
+
+.robot__cat__description__text__colored:hover {
+    color: red;
+}

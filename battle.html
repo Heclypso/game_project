@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Game</title>
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+
+    <link rel="stylesheet" href="src/styles/battle/main.css">
+    <link rel="stylesheet" href="src/styles/loading/loading.css">
+    <link rel="stylesheet" href="src/styles/battle/main_characters.css">
+    <link rel="stylesheet" href="src/styles/battle/cards.css">
+    <link rel="stylesheet" href="src/styles/battle/bottom_bar.css">
+    <link rel="stylesheet" href="src/styles/battle/victory_screen.css">
+    <link rel="stylesheet" href="src/styles/battle/sub_menus.css">
+    <link rel="stylesheet" href="src/styles/battle/summon.css">
+
+</head>
+
+<body>
+
+    <div id="load" class="loader">
+        <p>Loading</p>
+    </div>
+
+    <div id="options" class="black__background">
+        <div class="options__container">
+            <button>Placeholder</button>
+            <button>Placeholder</button>
+            <button>Placeholder</button>
+            <button id="close-options">Close Menu</button>
+        </div>
+    </div>
+
+    <div id="leave-battle-menu" class="black__background">
+        <div class="leave__battle__container">
+            <p class="leave__battle__container__text">Do you really want to leave combat? All your progress
+                will be lost and you will have to restart from the beginning of the level.
+            </p>
+
+            <div class="leave__battle__container__options__container">
+                <a class="leave__battle__container__options__container__link" href="index.html" id="exit-battle">Run</a>
+                <button id="stay-in-battle" class="leave__battle__container__options__container__button">Stay</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="robot-cat-banner" class="robot__cat__banner__container">
+        <div class="new__character__achievement">New Unit</div>
+        <div class="new__deck__achievement">New Deck</div>
+        <div class="robot__cat__banner__name__container">
+            <h2 class="robot__cat__name">Cat</h2>
+            <h3 class="robot__cat__title">A Robot Cat</h3>
+        </div>
+        <img class="robot__cat__img" src="src/assets/robot-cat.png" alt="">
+
+        <button class="robot__cat__banner__share__button">Share</button>
+    </div>
+
+    <div id="robot-cat-black-background" class="black__background--less-opacity">
+        <div id="robot-cat-description" class="robot__cat__description__container">
+            <p class="robot__cat__description">
+                - Robot Cat can use <span class="robot__cat__description__text__colored"> cloud cards... </span> to provides
+                buffs for his team and suffocate enemies.
+            </p>
+        </div>
+    </div>
+
+    <div id="won" class="black__background">
+        <div class="victory__screen__container">
+            <h2 class="victory__screen__title">You Won</h2>
+            <div class="victory__screen__drop__container">
+
+                <div class="victory__screen__drop__item">
+                    <img class="victory__screen__drop__item__image"
+                        src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-ltr6a81do5ywd4" alt="">
+                    <p class="victory__screen__drop__item__name">Item</p>
+                </div>
+
+                <div class="victory__screen__drop__item">
+                    <img class="victory__screen__drop__item__image"
+                        src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-ltr6a81do5ywd4" alt="">
+                    <p class="victory__screen__drop__item__name">Item</p>
+                </div>
+
+                <div class="victory__screen__drop__item">
+                    <img class="victory__screen__drop__item__image"
+                        src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-ltr6a81do5ywd4" alt="">
+                    <p class="victory__screen__drop__item__name">Item</p>
+                </div>
+
+                <div class="victory__screen__drop__item">
+                    <img class="victory__screen__drop__item__image"
+                        src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-ltr6a81do5ywd4" alt="">
+                    <p class="victory__screen__drop__item__name">Item</p>
+                </div>
+
+                <div class="victory__screen__drop__item">
+                    <img class="victory__screen__drop__item__image"
+                        src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-ltr6a81do5ywd4" alt="">
+                    <p class="victory__screen__drop__item__name">Item</p>
+                </div>
+
+                <div class="victory__screen__drop__item">
+                    <img class="victory__screen__drop__item__image"
+                        src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-ltr6a81do5ywd4" alt="">
+                    <p class="victory__screen__drop__item__name">Item</p>
+                </div>
+
+                <div class="victory__screen__drop__item">
+                    <img class="victory__screen__drop__item__image"
+                        src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-ltr6a81do5ywd4" alt="">
+                    <p class="victory__screen__drop__item__name">Item</p>
+                </div>
+
+                <div class="victory__screen__drop__item">
+                    <img class="victory__screen__drop__item__image"
+                        src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-ltr6a81do5ywd4" alt="">
+                    <p class="victory__screen__drop__item__name">Item</p>
+                </div>
+
+                <div class="victory__screen__drop__item">
+                    <img class="victory__screen__drop__item__image"
+                        src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-ltr6a81do5ywd4" alt="">
+                    <p class="victory__screen__drop__item__name">Item</p>
+                </div>
+
+            </div>
+            <a href="index.html" id="victory-screen-claim-button">Claim Rewards</a>
+        </div>
+    </div>
+
+    <div id="lose" class="black__background">
+        <div class="victory__screen__container">
+            <h2 class="lose__screen__title">You Lose</h2>
+            <div class="lose__screen__option__container">
+                <a href="index.html" id="victory-screen-claim-button">Leave</a>
+                <a href="battle.html" id="victory-screen-claim-button">Try Again</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content" class="main">
+        <div class="container">
+
+            <div class="ally__field">
+
+                <div draggable="false" class="card__container ally">
+                    <div class="card__body">
+                        <div class="card__display">
+                            <img draggable="false" src="src/assets/robot-cat.png" alt="">
+                        </div>
+                        <div class="card__red__hp">
+                            <div id="ally-hp" class="ally__green__hp">
+                                <div id="ally-hp-points" class="ally__hp__points">10</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div draggable="false" class="card__container ally">
+                    <div class="card__body">
+                        <div class="card__display">
+                            <img draggable="false" src="src/assets/robot-cat.png" alt="">
+                        </div>
+                        <div class="card__red__hp">
+                            <div id="ally-hp" class="ally__green__hp">
+                                <div id="ally-hp-points" class="ally__hp__points">10</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div draggable="false" class="card__container ally">
+                    <div class="card__body">
+                        <div class="card__display">
+                            <img draggable="false" src="src/assets/robot-cat.png" alt="">
+                        </div>
+                        <div class="card__red__hp">
+                            <div id="ally-hp" class="ally__green__hp">
+                                <div id="ally-hp-points" class="ally__hp__points">10</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="monster-field">
+
+                <div draggable="false" class="card__container enemy">
+                    <div class="card__body">
+                        <div class="card__display">
+                            <img draggable="false" src="src/assets/robot-cat.png" alt="">
+                        </div>
+                        <div class="card__red__hp">
+                            <div id="enemy-hp" class="card__green__hp">
+                                <div id="enemy-hp-points" class="card__hp__points">10/10</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div draggable="false" class="card__container enemy">
+                    <div class="card__body">
+                        <div class="card__display">
+                            <img draggable="false" src="src/assets/robot-cat.png" alt="">
+                        </div>
+                        <div class="card__red__hp">
+                            <div id="enemy-hp" class="card__green__hp">
+                                <div id="enemy-hp-points" class="card__hp__points">10/10</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div draggable="false" class="card__container enemy">
+                    <div class="card__body">
+                        <div class="card__display">
+                            <img draggable="false" src="src/assets/robot-cat.png" alt="">
+                        </div>
+                        <div class="card__red__hp">
+                            <div id="enemy-hp" class="card__green__hp">
+                                <div id="enemy-hp-points" class="card__hp__points">10/10</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="action-bar" class="bottom_bar">
+
+            <div class="main__container">
+
+
+                <div class="character__display__container">
+                    <img id="character-image" class="character__display__image"
+                        src="" alt="">
+
+                    <div id="character-name" class="character__display__name">Placeholder</div>
+
+                    <img id="tutorial-image" class="tutorial__display__image" src=""
+                        alt="">
+
+                    <div id="tutorial-name" class="tutorial__display__name">Placeholder</div>
+
+                </div>
+
+                <div id="character-ui" class="character__ui">
+
+                    <div id="main-character-bars-container">
+                        <div class="character__red__hp">
+                            <div class="character__green__hp">
+                                <div class="character__hp__points">10/10</div>
+                            </div>
+                        </div>
+                        <div class="character__mana__empty">
+                            <div class="character__mana__value">
+                                <div class="character__mana__points">10/10</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="main-tutorial-bars-container">
+                        <div class="character__red__hp">
+                            <div class="character__green__hp">
+                                <div class="character__hp__points">10/10</div>
+                            </div>
+                        </div>
+                        <div class="character__mana__empty">
+                            <div class="character__mana__value">
+                                <div class="character__mana__points">10/10</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character__options">
+                        <button id="draw-card-button">Draw</button>
+                        <button id="end-turn-button">End Turn</button>
+                        <button id="run">Run</button>
+                        <button id="open-options-button">Options</button>
+                    </div>
+                </div>
+
+                <div draggable="false" id="container-cards" class="main__container__cards column">
+
+                </div>
+
+                <div id="container-cards-close-button" class="close__container__cards__container"><button
+                        class="close__container__cards__container__button"><img id="container-cards-icon"
+                            src="https://cdn-icons-png.flaticon.com/128/271/271228.png" alt=""></button></div>
+
+                <div id="text-container" class="text__container">
+
+                    <p id="text-container-p"></p>
+
+                    <div class="text__container__button__container">
+                        <button id="text-container-yes">Yes</button>
+                        <Button id="text-container-no">No</Button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="build/main.js"></script>
+    <script src="build/loading.js"></script>
+    <script src="build/dialogue.js"></script>
+    <script src="build/battle-systems.js"></script>
+</body>
+
+</html>

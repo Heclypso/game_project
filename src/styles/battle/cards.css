@@ -23,7 +23,7 @@
 }
 
 .enemy:nth-child(2) {
-    top: 1;
+    bottom: 1;
     right: 16rem;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .ally:nth-child(2) {
-    top: 0;
+    bottom: 1;
     left: 16rem;
 }
 
@@ -59,19 +59,20 @@
     color: #030303;
 }
 
-.card__red__hp {
+.enemy__red__hp,
+.ally__red__hp {
     z-index: 1;
     background-color: red; 
 }
 
-.card__green__hp,
+.enemy__green__hp,
 .ally__green__hp {
     z-index: 2;
     width: 100%;
     background-color: #23CC64;
 }
 
-.card__hp__points,
+.enemy__hp__points,
 .ally__hp__points {
     z-index: 3;
     color: white;

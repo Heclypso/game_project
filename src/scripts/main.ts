@@ -28,10 +28,6 @@ runButton.addEventListener('click', () => {
     leaveContainer.style.display = "block";
 });
 
-confirmRunButton.addEventListener('click', () => {
-    console.log("voce deixou o combate")
-});
-
 denyRunButton.addEventListener('click', () => {
     leaveContainer.style.display = "none";
 });
@@ -61,7 +57,6 @@ closeOptionsButton.addEventListener('click', () => {
 });
 
 // sistema de draggin
-
 const columns = document.querySelectorAll<HTMLElement>(".column"); 
 
 document.addEventListener("dragstart", (e: DragEvent) => {
@@ -80,6 +75,10 @@ columns.forEach((item) => {
 
         const dragging = document.querySelector<HTMLElement>(".dragging");
         const applyAfter = getNewPosition(item, e.clientY);
+
+        if (dragging) {
+            cardHolder.style.display = "block"
+        } 
 
         if (applyAfter) {
             applyAfter.insertAdjacentElement("afterend", dragging);

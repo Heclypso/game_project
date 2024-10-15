@@ -11,6 +11,15 @@
 .enemy,
 .ally {
     position: absolute;
+    display: flex;
+    align-items: flex-end;
+}
+
+#card-holder {
+    background-color: red;
+    width: 190px;
+    height: 200px;
+    display: none;
 }
 
 .enemy .card__display {
@@ -96,13 +105,14 @@
     width: 40px;
 }
 
-.card__display img {
-    width: 100%;
-    display: none;
+.ally .card__display {
+    width: 60%;
+    margin: 0 auto;
 }
 
 .container .card__display img {
     display: block;
+    width: 100%;
 }
 
 .card__description {

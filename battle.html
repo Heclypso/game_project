@@ -15,6 +15,7 @@
     <!-- Styles -->
 
     <link rel="stylesheet" href="src/styles/battle/main.css">
+    <link rel="stylesheet" href="src/styles/battle/super_form.css">
     <link rel="stylesheet" href="src/styles/loading/loading.css">
     <link rel="stylesheet" href="src/styles/battle/cards.css">
     <link rel="stylesheet" href="src/styles/battle/bottom_bar.css">
@@ -133,7 +134,8 @@
                 </div>
 
             </div>
-            <a href="index.html" id="victory-screen-claim-button">Claim Rewards</a>
+            <a href="index.html" id="victory-screen-claim-button">Leave</a>
+            <a href="battle.html" id="victory-screen-claim-button">Try Again</a>
         </div>
     </div>
 
@@ -148,14 +150,19 @@
     </div>
 
     <div id="main-content" class="main">
-        <div class="container">
+
+        <audio id="super-form-music" class="super__form__music">
+        <source src="https://servidor-estatico-alpha-six.vercel.app/super-form-music.mp3" type="audio/mpeg">
+        </audio>
+
+        <div id="container" class="container">
 
             <div id="ally-field" class="ally__field">
 
                 <div draggable="false" class="card__container ally">
                     <div class="card__body">
-                        <div class="card__display">
-                            <img draggable="false" src="src/assets/robot-cat-1.png" alt="">
+                        <div class="card__display can__super__form__display">
+                            <img  draggable="false" class="can__super__form__image" src="src/assets/robot-cat-1.png" alt="">
                         </div>
                         <div class="ally__red__hp">
                             <div id="ally-hp" class="ally__green__hp">
@@ -167,8 +174,8 @@
 
                 <div draggable="false" class="card__container ally">
                     <div class="card__body">
-                        <div class="card__display">
-                            <img draggable="false" src="src/assets/robot-cat-1.png" alt="">
+                        <div class="card__display can__super__form__display">
+                            <img  draggable="false" class="can__super__form__image" src="src/assets/robot-cat-1.png" alt="">
                         </div>
                         <div class="ally__red__hp">
                             <div id="ally-hp" class="ally__green__hp">
@@ -178,6 +185,19 @@
                     </div>
                 </div>
 
+                <div draggable="false" class="card__container ally">
+                    <div class="card__body">
+                        <div class="card__display can__super__form__display">
+                            <img  draggable="false" class="can__super__form__image" src="src/assets/robot-cat-1.png" alt="">
+                        </div>
+                        <div class="ally__red__hp">
+                            <div id="ally-hp" class="ally__green__hp">
+                                <div id="ally-hp-points" class="ally__hp__points">10</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
 
             <div id="card-holder" class="column">

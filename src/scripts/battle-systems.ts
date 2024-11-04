@@ -256,11 +256,13 @@ function reducePlayerHP() {
 }
 
 function reduceEnemyHP() {
-    enemys[0].health -= 10
+    enemys[0].health -= allys[0].damage
+    enemys[1].health -= allys[0].damage
+    enemys[2].health -= allys[0].damage
 
     setEnemyHp(enemys[0], enemyHp[0]);
-    setEnemyHp(enemys[0], enemyHp[1]);
-    setEnemyHp(enemys[0], enemyHp[2]);
+    setEnemyHp(enemys[1], enemyHp[1]);
+    setEnemyHp(enemys[2], enemyHp[2]);
     updateEnemyHPBar();
 }
 
@@ -732,8 +734,6 @@ function thirdAllyMonsterAttack() {
 
         if (enemy.item(1)) {
             if (randomEnemy.id === 2) {
-                console.log(allys[1].health)
-
                 setTimeout(()=>{
                     thirdAlly.style.bottom = "40%"
                     thirdAlly.style.left = "85rem";
@@ -752,8 +752,6 @@ function thirdAllyMonsterAttack() {
         if (enemy.item(2)) {
             
             if (randomEnemy.id === 3) {
-                console.log(allys[2].health)
-
                 setTimeout(()=>{
                     thirdAlly.style.bottom = "0"
                     thirdAlly.style.left = "100rem";
@@ -777,6 +775,10 @@ function thirdAllyMonsterAttack() {
 const superFormMusic = document.getElementById('super-form-music') as HTMLAudioElement;
 const superFormImage = document.querySelectorAll<HTMLImageElement>('.can__super__form__image');
 const allyCardDisplay = document.querySelectorAll<HTMLElement>('.can__super__form__display');
+const superFormBackground = document.getElementById('super-form-background') as HTMLElement;
+const superFormStatus = document.getElementById('super-form-status') as HTMLElement;
+const superFormHealth = document.getElementById('super-form-health') as HTMLElement;
+const superFormDamage = document.getElementById('super-form-damage') as HTMLElement;
 
 superFormMusic.pause()
 
@@ -784,13 +786,38 @@ function superFormTransformation() {
 
     ally.item(0).classList.add('super__form')
     superFormMusic.play()
+    superFormBackground.style.display = "flex"
+    setTimeout(() => {
+        ally.item(0).classList.remove('super__form')
+    }, 1000);
 
     setTimeout(() => {
         allyCardDisplay.item(0).style.width = "100%"
-        ally.item(0).style.zIndex = "5"
+        ally.item(0).style.left = "45%"
+        superFormBackground.style.width = "100vw"
+        superFormBackground.style.height = "100vh"
+        superFormBackground.style.top = "0"
+        superFormBackground.style.right = "0"
+        superFormBackground.style.borderRadius = "0%"
+
         allys[0].damage = 60;
         superFormImage.item(0).src = 'https://servidor-estatico-alpha-six.vercel.app/robot-cat--super-form.png';
     }, 3000); 
+
+    setTimeout(() => {
+        superFormStatus.style.display = "flex"
+        superFormDamage.innerText = `Damage: ${allys[0].damage}`;
+        superFormHealth.innerText = `Health: ${allys[0].health}`;
+    }, 7000);
+
+    setTimeout(() => {
+        superFormStatus.style.display = "none"
+        superFormBackground.style.width = "0"
+        superFormBackground.style.height = "0"
+        superFormBackground.style.top = "50%"
+        superFormBackground.style.right = "50%"
+        superFormBackground.style.borderRadius = "50%"
+    }, 9000);
 }
 
 // sistema de mana
@@ -883,19 +910,7 @@ const nextTurnButton = document.getElementById('end-turn-button') as HTMLButtonE
 if (nextTurnButton) {
     nextTurnButton.addEventListener('click', () => {
 
-        firstAllyMonsterAttack() 
-        secondAllyMonsterAttack() 
-        thirdAllyMonsterAttack()
-
-        setTimeout(() => {
-            firstEnemyMonsterAttack() 
-            secondEnemyMonsterAttack() 
-            thirdEnemyMonsterAttack()
-        }, 11400);
-    
-        increaseMana(0)
-
-       if (skillCard.length > 0) {
+        if (skillCard.length > 0) {
 
             for (let i = 0; i < skillCard.length; i++) {
                 if (cardHolder?.contains(skillCard[i])) {
@@ -909,7 +924,40 @@ if (nextTurnButton) {
                     }
                 }
             }
-       }
+        }    
+
         cardHolder.style.display = "none"
+        containerCards.style.display = "none"
+        containerCardsIcon.style.rotate = "0deg";
+
+        const superForm = document.querySelectorAll('.super__form')
+
+        if (superForm.length >= 1) {
+
+            setTimeout(() => {
+                firstAllyMonsterAttack() 
+                secondAllyMonsterAttack() 
+                thirdAllyMonsterAttack()
+        
+                setTimeout(() => {
+                    firstEnemyMonsterAttack() 
+                    secondEnemyMonsterAttack() 
+                    thirdEnemyMonsterAttack()
+                }, 11400);
+
+            }, 10000);
+        } else {
+            firstAllyMonsterAttack() 
+            secondAllyMonsterAttack() 
+            thirdAllyMonsterAttack()
+    
+            setTimeout(() => {
+                firstEnemyMonsterAttack() 
+                secondEnemyMonsterAttack() 
+                thirdEnemyMonsterAttack()
+            }, 11400);
+        }
+    
+        increaseMana(0)
     });
 }
